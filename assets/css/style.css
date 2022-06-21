@@ -1,12 +1,20 @@
 * {
     background-color: lightgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+}
+
+header {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto;
 }
 
 .btn {
     background-color: lightgreen;
 }
 
-h1, #intro {
+#intro {
     text-align: center;
 }
 
