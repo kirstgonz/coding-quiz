@@ -1,0 +1,13 @@
+* {
+    background-color: lightgray;
+}
+
+.btn {
+    background-color: lightgreen;
+}
+
+h1, #intro {
+    text-align: center;
+}
+
+
