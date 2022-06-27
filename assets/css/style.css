@@ -10,12 +10,29 @@ header {
     grid-template-columns: auto auto auto;
 }
 
-.btn {
+#intro {
+    text-align: center;
+    margin-left: 140px;
+}
+
+#start-btn {
     background-color: lightgreen;
 }
 
-#intro {
+/* #quiz {
     text-align: center;
+} */
+
+#choices button {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
+#choices button:hover {
+    background-color: aquamarine;
+}
 
+#ending {
+    text-align: center;
+}

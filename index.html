@@ -12,7 +12,7 @@
     <header>
         <!-- ADD HIGHSCORES -->
         <div>
-            <p>High scores</p>
+            <p>View high scores</p>
         </div>
 
         <h1> Coding Quiz</h1>
@@ -26,7 +26,31 @@
         <h2>Try your hand at this timed coding quiz! 
             <br>Can you correctly answer all? 
         </h2>
-        <button class="btn" id="start-btn">Start</button>
+        <button id="start-btn">Start</button>
+    </div>
+
+    <!-- Questions -->
+    <section id="quiz">
+        <div>
+            <p id="question"></p>
+        </div>
+
+    <!-- Answer choices -->
+        <div id="choices">
+            <button id="a" class="btn" onclick="getAnswer('A')">A.</button>
+            <button id="b" class="btn" onclick="getAnswer('B')">B.</button>
+            <button id="c" class="btn" onclick="getAnswer('C')">C.</button>
+            <button id="d" class="btn" onclick="getAnswer('D')">D.</button>
+        </div>
+
+        <div>
+            <p id="wrong-correct"></p>
+        </div>
+    </section>
+
+    <!-- End  -->
+    <div>
+        <p id="ending"></p>
     </div>
 <script src="assets/js/script.js"></script>
 </body>
