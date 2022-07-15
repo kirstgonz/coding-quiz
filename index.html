@@ -11,8 +11,8 @@
 <body>
     <header>
         <!-- ADD HIGHSCORES -->
-        <div>
-            <p>View high scores</p>
+        <button id="score-btn">High Scores</button>
+        <div id="highscore">
         </div>
 
         <h1> Coding Quiz</h1>
@@ -49,8 +49,13 @@
     </section>
 
     <!-- End  -->
-    <div>
+    <div id="end-of-quiz">
         <p id="ending"></p>
+        <form>
+            <input type="text" id="initial" value="" name="initials" placeholder="Initials">
+            <button id="submit" name="submitInitials">Submit High Score</button>
+            <button type="reset" id="reset" name="resetQuiz">Replay the Quiz!</button>
+        </form>
     </div>
 <script src="assets/js/script.js"></script>
 </body>

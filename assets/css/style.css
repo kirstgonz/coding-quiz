@@ -10,6 +10,12 @@ header {
     grid-template-columns: auto auto auto;
 }
 
+button{
+    background-color: rgb(230, 191, 251);
+    border-radius: 5px;
+    margin: 20px;
+}
+
 #intro {
     text-align: center;
     margin-left: 140px;
@@ -19,20 +25,16 @@ header {
     background-color: lightgreen;
 }
 
-/* #quiz {
-    text-align: center;
-} */
-
 #choices button {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
 }
 
-#choices button:hover {
-    background-color: aquamarine;
-}
-
-#ending {
+#end-of-quiz {
     text-align: center;
+}
+
+#submit {
+    background-color: gold;
+    margin: 20px;
 }
