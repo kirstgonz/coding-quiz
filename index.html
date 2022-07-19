@@ -11,17 +11,21 @@
 <body>
     <header>
         <!-- ADD HIGHSCORES -->
-        <button id="score-btn">High Scores</button>
+        <div>    
+            <button id="score-btn">High Scores</button>
+        </div>
         <div id="highscore">
         </div>
-
-        <h1> Coding Quiz</h1>
          
         <!-- Timer -->
         <div id="timer">
         </div>
     </header>
 
+    <div>
+        <h1> Coding Quiz</h1>
+    </div>
+    
     <div id="intro">
         <h2>Try your hand at this timed coding quiz! 
             <br>Can you correctly answer all? 
@@ -54,7 +58,9 @@
         <form>
             <input type="text" id="initial" value="" name="initials" placeholder="Initials">
             <button id="submit" name="submitInitials">Submit High Score</button>
-            <button type="reset" id="reset" name="resetQuiz">Replay the Quiz!</button>
+            <br>
+                <button type="reset" id="reset" name="resetQuiz">Replay the Quiz!</button>
+            </br>
         </form>
     </div>
 <script src="assets/js/script.js"></script>

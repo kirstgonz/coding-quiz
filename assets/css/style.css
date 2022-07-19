@@ -16,6 +16,17 @@ button{
     margin: 20px;
 }
 
+h1 {
+    text-align: center;
+    margin-left: 140px;
+}
+
+#timer {
+    margin: 0;
+    position: absolute;
+    left: 87%;
+}
+
 #intro {
     text-align: center;
     margin-left: 140px;
@@ -25,9 +36,15 @@ button{
     background-color: lightgreen;
 }
 
+#quiz {
+    text-align: center;
+}
+
 #choices button {
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    margin-left: 140px;
 }
 
 #end-of-quiz {

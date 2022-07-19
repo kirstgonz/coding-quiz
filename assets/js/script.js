@@ -5,8 +5,9 @@ var timer;
 
 //Making high scores hidden until high score button is clicked
 var highScoreEl = document.getElementById("highscore");
-    highScoreEl.style.visibility = "hidden";
+    highScoreEl.style.display = "none";
 var highScoreButton = document.getElementById("score-btn");
+var scoresShown = false;
 
 // Making the timer hidden at 01:00
 var timerEl = document.getElementById("timer");
@@ -75,6 +76,8 @@ var resetButton = document.querySelector("#reset");
 startButton.addEventListener("click", function (event) {
     document.getElementById("intro").style.display = "none";
     quizEl.style.visibility = "visible";
+    scoresShown = true;
+    showScores();
     workingTimer();
     displayQuestion(questionIndex);
 });
@@ -162,6 +165,7 @@ submitButtonEl.addEventListener("click", function(event){
     };
 
     localStorage.setItem(user.initials, JSON.stringify(user));
+    storeScores();
 });
 
 function storeScores() {
@@ -182,8 +186,15 @@ function storeScores() {
     return archiveScores;
 }
 
+
 function showScores() {
-    highScoreEl.style.visibility = "visible";
+    if(scoresShown){
+        scoresShown = false;
+        highScoreEl.style.display = "none";
+    } else {
+        scoresShown = true;
+        highScoreEl.style.display = "block";
+    }
 };
 
 highScoreButton.addEventListener("click", showScores);
@@ -197,4 +208,3 @@ function resetQuiz() {
 resetButton.addEventListener("click", resetQuiz);
 
 storeScores();
-
