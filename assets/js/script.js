@@ -94,7 +94,7 @@ timerEl.style.visibility = "visible";
         }
         if (seconds <= 0) {
             clearInterval(timer);
-            endGame();
+            endQuiz();
         };
         seconds--;
     }, 1000);
@@ -121,7 +121,7 @@ function getAnswer(userSelection) {
         wrongCorrectEl.innerText = "correct!"
 
             if(questionIndex > 3 || seconds <= 0) {
-                endGame();
+                endQuiz();
             } else {
                 var buttonColor = "rgb(230, 191, 251)";
 
@@ -142,7 +142,7 @@ function getAnswer(userSelection) {
 }
 
 //Ends the game
-function endGame() {
+function endQuiz() {
     quizEl.remove();
     timerEl.remove();
     clearInterval(timer);
@@ -155,7 +155,7 @@ function endGame() {
     }
 }
 
-//Grabbing user input for initials. Placing initians and high score in localStorage
+//Grabbing user input for initials. Placing initials and high score in localStorage
 submitButtonEl.addEventListener("click", function(event){
     event.preventDefault();
 
@@ -168,6 +168,7 @@ submitButtonEl.addEventListener("click", function(event){
     storeScores();
 });
 
+//Stores the scores in local storage
 function storeScores() {
     highScoreEl.innerHTML = null;
 
@@ -186,7 +187,7 @@ function storeScores() {
     return archiveScores;
 }
 
-
+//Shows or hides scores on the page from local storage
 function showScores() {
     if(scoresShown){
         scoresShown = false;
@@ -197,6 +198,7 @@ function showScores() {
     }
 };
 
+//Listens for the click on high score button to run showScores funcion
 highScoreButton.addEventListener("click", showScores);
 
 //resets the quiz
